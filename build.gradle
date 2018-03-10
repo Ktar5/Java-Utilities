@@ -1,0 +1,23 @@
+group 'com.ktar5'
+version '1.0-SNAPSHOT'
+
+allprojects {
+    apply plugin: 'idea'
+}
+
+configure(subprojects) {
+    //apply plugin: "net.ltgt.errorprone"
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+}
+
+subprojects {
+    version = '0.0.1-SNAPSHOT'
+    ext.appName = 'Utilities'
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+
+}

@@ -1,0 +1,10 @@
+group 'com.ktar5'
+
+dependencies {
+    compile project(':libgdx')
+
+    compile 'com.eleet:dragonconsole:3.0.0-SNAPSHOT'
+
+    compile "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+
+}

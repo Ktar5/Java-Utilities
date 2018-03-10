@@ -1,0 +1,8 @@
+group 'com.ktar5'
+
+dependencies {
+    compile "org.mini2Dx:gdx-collections:1.9.5"
+    compile 'org.tinylog:tinylog:1.3.2' //Lightweight logging framework
+    compile group: 'org.tinylog', name: 'slf4j-binding', version: '1.3.2'
+    compile "org.projectlombok:lombok:1.16.20" //Lombok
+}
