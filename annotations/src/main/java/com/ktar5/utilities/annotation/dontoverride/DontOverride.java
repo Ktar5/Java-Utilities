@@ -1,4 +1,4 @@
-package com.ktar5.utilities.common.annotations;
+package com.ktar5.utilities.annotation.dontoverride;
 
 import java.lang.annotation.*;
 
@@ -6,4 +6,5 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 @Inherited
 @Retention(RetentionPolicy.SOURCE)
-public @interface DontOverride { }
+public @interface DontOverride {
+}
