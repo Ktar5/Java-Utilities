@@ -2,7 +2,6 @@ package com.ktar5.utilities.enginegdx.entity.living;
 
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.ktar5.utilities.common.annotations.CallSuper;
 import com.ktar5.utilities.common.constants.Direction;
 import com.ktar5.utilities.enginegdx.EngineManager;
 import com.ktar5.utilities.enginegdx.entity.components.movement.SetVelocityMovement;
@@ -65,7 +64,6 @@ public abstract class PlayerEntity<S extends State<T>, T> extends LivingEntity i
     }
 
     @Override
-    @CallSuper
     public void reset() {
         super.reset();
     }
@@ -76,7 +74,6 @@ public abstract class PlayerEntity<S extends State<T>, T> extends LivingEntity i
     }
 
     @Override
-    @CallSuper
     public void update(float dTime) {
         super.update(dTime);
     }

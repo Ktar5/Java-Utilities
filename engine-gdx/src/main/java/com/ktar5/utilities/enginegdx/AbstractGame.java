@@ -3,7 +3,6 @@ package com.ktar5.utilities.enginegdx;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 
-import com.ktar5.utilities.common.annotations.CallSuper;
 import com.ktar5.utilities.libgdx.Const;
 import com.ktar5.utilities.libgdx.Updatable;
 import com.ktar5.utilities.libgdx.camera.CameraBase;
@@ -19,7 +18,6 @@ public abstract class AbstractGame<G extends AbstractGame<G, P>, P extends Playe
     protected abstract AbstractScreen getStartingScreen();
 
     @Override
-    @CallSuper
     public void create() {
         engineManager = EngineManager.initialize(getThis());
         setScreen(getStartingScreen());

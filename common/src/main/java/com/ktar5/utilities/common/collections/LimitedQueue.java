@@ -1,6 +1,8 @@
 package com.ktar5.utilities.common.collections;
 
 
+import com.kotcrab.annotation.CallSuper;
+
 import java.util.LinkedList;
 
 public class LimitedQueue<E> extends LinkedList<E> {
@@ -12,6 +14,7 @@ public class LimitedQueue<E> extends LinkedList<E> {
     }
 
     @Override
+    @CallSuper
     public boolean add(E o) {
         super.addFirst(o);
         while (size() > limit) { super.removeLast(); }

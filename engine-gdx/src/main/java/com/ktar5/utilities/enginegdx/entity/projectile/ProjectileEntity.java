@@ -1,7 +1,6 @@
 package com.ktar5.utilities.enginegdx.entity.projectile;
 
 import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.ktar5.utilities.common.annotations.CallSuper;
 import com.ktar5.utilities.enginegdx.entity.Entity;
 import com.ktar5.utilities.enginegdx.entity.datastore.BodyDatastore;
 import com.ktar5.utilities.enginegdx.entity.datastore.ProjectileDatastore;
@@ -33,12 +32,11 @@ public abstract class ProjectileEntity extends Entity {
     }
 
     @Override
-    @CallSuper
     public void reset() {
         super.reset();
     }
 
-    @Override @CallSuper
+    @Override
     public void update(float dTime) {
         super.update(dTime);
     }

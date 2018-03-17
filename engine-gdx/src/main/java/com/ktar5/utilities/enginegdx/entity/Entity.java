@@ -8,7 +8,6 @@ import com.badlogic.gdx.utils.Pool;
 import com.googlecode.cqengine.attribute.Attribute;
 import com.googlecode.cqengine.attribute.SimpleAttribute;
 import com.googlecode.cqengine.query.option.QueryOptions;
-import com.ktar5.utilities.common.annotations.CallSuper;
 import com.ktar5.utilities.enginegdx.entity.components.EntityAnimator;
 import com.ktar5.utilities.enginegdx.entity.components.Position;
 import com.ktar5.utilities.enginegdx.entity.datastore.BodyDatastore;
@@ -52,14 +51,12 @@ public abstract class Entity extends Identity implements Pool.Poolable, Updatabl
     //endregion
 
     @Override
-    @CallSuper
     public void reset() {
         super.reset();
         WorldManager.getInstance().getWorld().destroyBody(physBody);
     }
 
     @Override
-    @CallSuper
     public void update(float dTime) {
         //TODO
         //physBody.setTransform(position.x, position.y, position.getAngle());

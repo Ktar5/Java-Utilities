@@ -1,5 +1,4 @@
 package com.ktar5.utilities.enginegdx.entity.living;
-import com.ktar5.utilities.common.annotations.CallSuper;
 
 public abstract class Enemy extends LivingEntity {
 
@@ -8,7 +7,6 @@ public abstract class Enemy extends LivingEntity {
     }
 
     @Override
-    @CallSuper
     public void reset() {
         super.reset();
     }
@@ -19,7 +17,6 @@ public abstract class Enemy extends LivingEntity {
     }
 
     @Override
-    @CallSuper
     public void update(float dTime) {
         super.update(dTime);
     }

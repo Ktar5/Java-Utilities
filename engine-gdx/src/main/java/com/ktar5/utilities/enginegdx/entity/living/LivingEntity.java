@@ -1,6 +1,5 @@
 package com.ktar5.utilities.enginegdx.entity.living;
 
-import com.ktar5.utilities.common.annotations.CallSuper;
 import com.ktar5.utilities.enginegdx.entity.Entity;
 import com.ktar5.utilities.enginegdx.entity.components.Health;
 import com.ktar5.utilities.enginegdx.entity.datastore.BodyDatastore;
@@ -21,7 +20,7 @@ public abstract class LivingEntity extends Entity {
         return new EntityDatastore(this);
     }
 
-    @Override @CallSuper
+    @Override
     public void update(float dTime) {
         super.update(dTime);
     }

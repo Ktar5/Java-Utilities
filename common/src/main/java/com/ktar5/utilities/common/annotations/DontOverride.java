@@ -5,5 +5,5 @@ import java.lang.annotation.*;
 @Documented
 @Target(ElementType.METHOD)
 @Inherited
-@Retention(RetentionPolicy.RUNTIME)
-public @interface CallSuper{ }
+@Retention(RetentionPolicy.SOURCE)
+public @interface DontOverride { }

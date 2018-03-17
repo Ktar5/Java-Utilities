@@ -1,7 +1,6 @@
 package com.ktar5.utilities.enginegdx.entity;
 
 import com.badlogic.gdx.physics.box2d.Contact;
-import com.ktar5.utilities.common.annotations.CallSuper;
 import com.ktar5.utilities.enginegdx.entity.datastore.BodyDatastore;
 import com.ktar5.utilities.enginegdx.entity.datastore.SensorDatastore;
 import lombok.Getter;
@@ -16,7 +15,6 @@ public abstract class SensorEntity extends Entity {
     }
 
     @Override
-    @CallSuper
     public void reset() {
         super.reset();
     }
