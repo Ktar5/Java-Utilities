@@ -27,8 +27,11 @@ import com.sun.tools.javac.code.Symbol.MethodSymbol;
 import com.sun.tools.javac.code.Type.ClassType;
 import com.sun.tools.javac.tree.JCTree.JCIdent;
 import com.sun.tools.javac.tree.JCTree.JCTypeApply;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.lang.annotation.Annotation;
+import java.util.List;
 
 class DontOverrideCodeAnalyzerTreeScanner extends TreePathScanner<Object, Trees> {
     private String methodName;
@@ -37,24 +40,36 @@ class DontOverrideCodeAnalyzerTreeScanner extends TreePathScanner<Object, Trees>
 
     @Override
     public Object visitClass(ClassTree classTree, Trees trees) {
-        Tree extendTree = classTree.getExtendsClause();
+        System.out.println("Class: " + classTree.getSimpleName());
+        //System.out.println(ToStringBuilder.reflectionToString(classTree, ToStringStyle.JSON_STYLE));
+        List<? extends Tree> toCheck = classTree.getImplementsClause();
 
-        if (extendTree instanceof JCTypeApply) { //generic classes case
-            JCTypeApply generic = (JCTypeApply) extendTree;
-            extendTree = generic.clazz;
+        Tree tree = classTree.getExtendsClause();
+        if (tree instanceof JCTypeApply) { //generic classes case
+            JCTypeApply generic = (JCTypeApply) tree;
+            tree = generic.clazz;
         }
 
-        if (extendTree instanceof JCIdent) {
-            JCIdent tree = (JCIdent) extendTree;
-            Scope members = tree.sym.members();
 
-            if (checkScope(members))
-                return super.visitClass(classTree, trees);
+        int i = toCheck.size();
+        while (true) {
+            if (tree instanceof JCIdent) {
+                JCIdent ident = (JCIdent) tree;
+                Scope members = ident.sym.members();
 
-            if (checkSuperTypes((ClassType) tree.type))
-                return super.visitClass(classTree, trees);
+                if (checkScope(members))
+                    return super.visitClass(classTree, trees);
 
+                if (checkSuperTypes((ClassType) ident.type))
+                    return super.visitClass(classTree, trees);
+            }
+            i--;
+            if(i < 0){
+                break;
+            }
+            tree = toCheck.get(i);
         }
+
         dontOverrideUser = false;
 
         return super.visitClass(classTree, trees);
@@ -62,15 +77,16 @@ class DontOverrideCodeAnalyzerTreeScanner extends TreePathScanner<Object, Trees>
 
     public boolean checkSuperTypes(ClassType type) {
         if (type.supertype_field != null && type.supertype_field.tsym != null) {
+            System.out.println(ToStringBuilder.reflectionToString(type, ToStringStyle.JSON_STYLE));
             if (checkScope(type.supertype_field.tsym.members()))
                 return true;
             else
                 return checkSuperTypes((ClassType) type.supertype_field);
         }
-
         return false;
     }
 
+    //return true when shit hits the fan
     public boolean checkScope(Scope members) {
         for (Symbol s : members.getElements()) {
             if (s instanceof MethodSymbol) {
@@ -80,12 +96,12 @@ class DontOverrideCodeAnalyzerTreeScanner extends TreePathScanner<Object, Trees>
                     Annotation annotation = ms.getAnnotation(DontOverride.class);
                     if (annotation != null) {
                         dontOverrideUser = true;
+                        System.out.println("Checked true");
                         return true;
                     }
                 }
             }
         }
-
         return false;
     }
 
