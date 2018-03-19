@@ -40,8 +40,6 @@ class DontOverrideCodeAnalyzerTreeScanner extends TreePathScanner<Object, Trees>
 
     @Override
     public Object visitClass(ClassTree classTree, Trees trees) {
-        System.out.println("Class: " + classTree.getSimpleName());
-        //System.out.println(ToStringBuilder.reflectionToString(classTree, ToStringStyle.JSON_STYLE));
         List<? extends Tree> toCheck = classTree.getImplementsClause();
 
         Tree tree = classTree.getExtendsClause();
@@ -77,7 +75,6 @@ class DontOverrideCodeAnalyzerTreeScanner extends TreePathScanner<Object, Trees>
 
     public boolean checkSuperTypes(ClassType type) {
         if (type.supertype_field != null && type.supertype_field.tsym != null) {
-            System.out.println(ToStringBuilder.reflectionToString(type, ToStringStyle.JSON_STYLE));
             if (checkScope(type.supertype_field.tsym.members()))
                 return true;
             else
@@ -96,7 +93,6 @@ class DontOverrideCodeAnalyzerTreeScanner extends TreePathScanner<Object, Trees>
                     Annotation annotation = ms.getAnnotation(DontOverride.class);
                     if (annotation != null) {
                         dontOverrideUser = true;
-                        System.out.println("Checked true");
                         return true;
                     }
                 }

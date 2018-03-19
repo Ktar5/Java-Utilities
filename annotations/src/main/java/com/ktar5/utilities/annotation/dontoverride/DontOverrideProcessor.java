@@ -42,7 +42,6 @@ public class DontOverrideProcessor extends AbstractProcessor {
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
         for (Element e : roundEnv.getElementsAnnotatedWith(Override.class)) {
             if (e.getAnnotation(OverrideDontOverride.class) != null) return false;
-            System.out.println("\nProcessing method: " + e.getSimpleName());
             DontOverrideCodeAnalyzerTreeScanner codeScanner = new DontOverrideCodeAnalyzerTreeScanner();
             codeScanner.setMethodName(e.getSimpleName().toString());
 
