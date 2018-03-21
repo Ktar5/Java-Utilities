@@ -1,4 +1,4 @@
-package com.ktar5.utilities.libgdx.camera;
+package com.ktar5.utilities.enginegdx;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -11,6 +11,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.ktar5.utilities.libgdx.Feature;
+import com.ktar5.utilities.libgdx.camera.CameraBase;
 
 import static com.ktar5.utilities.libgdx.Const.CAMERA_SMOOTH;
 
