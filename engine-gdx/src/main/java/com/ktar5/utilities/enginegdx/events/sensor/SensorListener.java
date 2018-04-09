@@ -1,18 +1,16 @@
 package com.ktar5.utilities.enginegdx.events.sensor;
 
 import com.ktar5.utilities.enginegdx.EngineManager;
-import com.ktar5.utilities.enginegdx.events.contact.BeginContactEvent;
-import com.ktar5.utilities.enginegdx.events.contact.EndContactEvent;
 import com.ktar5.utilities.enginegdx.entity.datastore.EntityDatastore;
 import com.ktar5.utilities.enginegdx.entity.datastore.SensorDatastore;
-import com.ktar5.utilities.libgdx.events.GameListener;
-import com.sun.xml.internal.fastinfoset.stax.events.EventBase;
+import com.ktar5.utilities.enginegdx.events.contact.BeginContactEvent;
+import com.ktar5.utilities.enginegdx.events.contact.EndContactEvent;
 import net.engio.mbassy.listener.Handler;
 import net.engio.mbassy.listener.Listener;
 import net.engio.mbassy.listener.References;
 
 @Listener(references = References.Strong)
-public class SensorListener implements GameListener {
+public class SensorListener {
 
     @Handler
     public void handleSensorEnter(BeginContactEvent event) {
@@ -28,7 +26,6 @@ public class SensorListener implements GameListener {
         });
     }
 
-    @Override
     public void subscribe() {
         EngineManager.get().getEventBus().subscribe(this);
     }

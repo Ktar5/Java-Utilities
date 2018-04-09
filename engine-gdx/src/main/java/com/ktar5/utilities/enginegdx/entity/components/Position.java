@@ -3,7 +3,7 @@ package com.ktar5.utilities.enginegdx.entity.components;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Pool;
 import com.ktar5.utilities.common.constants.Direction;
-import com.ktar5.utilities.enginegdx.old.util.PixelGridUtil;
+import com.ktar5.utilities.enginegdx.util.PixelGridUtil;
 import lombok.Getter;
 
 @Getter

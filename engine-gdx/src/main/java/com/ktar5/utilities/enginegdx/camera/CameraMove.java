@@ -1,10 +1,11 @@
-package com.ktar5.utilities.libgdx.camera;
+package com.ktar5.utilities.enginegdx.camera;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.ktar5.utilities.libgdx.Feature;
+import com.ktar5.utilities.libgdx.camera.CameraBase;
 
 public class CameraMove extends CameraBase {
     private final float speed = 2;

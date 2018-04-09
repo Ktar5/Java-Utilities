@@ -10,8 +10,8 @@ import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.ktar5.utilities.enginegdx.EngineManager;
 import com.ktar5.utilities.enginegdx.events.contact.ContactEventDispatcher;
-import com.ktar5.utilities.libgdx.Const;
 import com.ktar5.utilities.enginegdx.rendering.Renderable;
+import com.ktar5.utilities.libgdx.Const;
 import com.ktar5.utilities.libgdx.Updatable;
 import lombok.Getter;
 

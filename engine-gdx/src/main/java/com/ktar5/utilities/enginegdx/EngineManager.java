@@ -1,14 +1,14 @@
 package com.ktar5.utilities.enginegdx;
 
 import com.badlogic.gdx.utils.Disposable;
+import com.ktar5.utilities.enginegdx.entity.EntityCoordinator;
+import com.ktar5.utilities.enginegdx.entity.living.PlayerEntity;
 import com.ktar5.utilities.enginegdx.events.projectile.ProjectileContactListener;
 import com.ktar5.utilities.enginegdx.events.sensor.SensorListener;
 import com.ktar5.utilities.enginegdx.old.box2d.WorldManager;
 import com.ktar5.utilities.libgdx.animation.AnimationLoader;
 import com.ktar5.utilities.libgdx.camera.CameraBase;
 import com.ktar5.utilities.libgdx.cooldown.CooldownManager;
-import com.ktar5.utilities.enginegdx.entity.EntityCoordinator;
-import com.ktar5.utilities.enginegdx.entity.living.PlayerEntity;
 import com.ktar5.utilities.libgdx.events.GameEvent;
 import com.ktar5.utilities.libgdx.tweenengine.TweenManager;
 import lombok.Getter;

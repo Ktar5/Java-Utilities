@@ -2,11 +2,10 @@ package com.ktar5.utilities.enginegdx;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
-
+import com.ktar5.utilities.enginegdx.entity.living.PlayerEntity;
 import com.ktar5.utilities.libgdx.Const;
 import com.ktar5.utilities.libgdx.Updatable;
 import com.ktar5.utilities.libgdx.camera.CameraBase;
-import com.ktar5.utilities.enginegdx.entity.living.PlayerEntity;
 
 public abstract class AbstractGame<G extends AbstractGame<G, P>, P extends PlayerEntity> implements ApplicationListener {
     protected AbstractScreen screen;
