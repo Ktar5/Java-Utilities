@@ -1,4 +1,4 @@
-package com.ktar5.libgdx.entities.components.movement;
+package com.ktar5.utilities.libgdx.entities.components.movement;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;

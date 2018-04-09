@@ -1,6 +1,6 @@
 package com.ktar5.libgdx.entities.entity;
 
-import com.ktar5.libgdx.entities.components.Health;
+import com.ktar5.utilities.libgdx.entities.components.Health;
 
 public interface ILivingEntity extends IEntity {
 

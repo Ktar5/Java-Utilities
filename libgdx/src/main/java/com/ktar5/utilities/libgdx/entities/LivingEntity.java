@@ -1,10 +1,10 @@
-package com.ktar5.libgdx.entities.entity;
+package com.ktar5.utilities.libgdx.entities;
 
-import com.ktar5.libgdx.entities.components.Health;
+import com.ktar5.utilities.libgdx.entities.components.Health;
 import lombok.Getter;
 
 @Getter
-public abstract class LivingEntity extends EntityBase implements ILivingEntity {
+public abstract class LivingEntity extends Entity {
     public final Health health;
 
     public LivingEntity(int maxHealth, float height, float width) {

@@ -1,6 +1,6 @@
 package com.ktar5.libgdx.entities.events.health;
 
-import com.ktar5.libgdx.entities.components.Health;
+import com.ktar5.utilities.libgdx.entities.components.Health;
 import com.ktar5.libgdx.entities.entity.ILivingEntity;
 import com.ktar5.utilities.libgdx.events.GameEvent;
 import lombok.AllArgsConstructor;

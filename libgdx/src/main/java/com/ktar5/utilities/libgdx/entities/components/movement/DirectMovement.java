@@ -1,4 +1,4 @@
-package com.ktar5.libgdx.entities.components.movement;
+package com.ktar5.utilities.libgdx.entities.components.movement;
 
 public class DirectMovement extends Movement {
 

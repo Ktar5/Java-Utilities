@@ -1,9 +1,9 @@
-package com.ktar5.libgdx.entities.entity;
+package com.ktar5.utilities.libgdx.entities;
 
-import com.ktar5.libgdx.entities.components.EntityAnimator;
-import com.ktar5.libgdx.entities.components.movement.Movement;
-import com.ktar5.libgdx.entities.components.movement.SetVelocityMovement;
 import com.ktar5.utilities.libgdx.core.EngineManager;
+import com.ktar5.utilities.libgdx.entities.components.EntityAnimator;
+import com.ktar5.utilities.libgdx.entities.components.movement.Movement;
+import com.ktar5.utilities.libgdx.entities.components.movement.SetVelocityMovement;
 import com.ktar5.utilities.libgdx.fsm.GameStateMachine;
 import com.ktar5.utilities.libgdx.fsm.State;
 import lombok.Getter;

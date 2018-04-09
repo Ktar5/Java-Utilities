@@ -1,6 +1,6 @@
 package com.ktar5.libgdx.entities.entity.box2d;
 
-import com.ktar5.libgdx.entities.components.Health;
+import com.ktar5.utilities.libgdx.entities.components.Health;
 import com.ktar5.libgdx.entities.entity.box2d.datastore.BodyDatastore;
 import com.ktar5.libgdx.entities.entity.box2d.datastore.EntityDatastore;
 import com.ktar5.libgdx.entities.entity.ILivingEntity;
