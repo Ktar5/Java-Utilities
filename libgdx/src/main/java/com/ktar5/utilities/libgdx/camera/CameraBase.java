@@ -2,7 +2,7 @@ package com.ktar5.utilities.libgdx.camera;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.ktar5.utilities.libgdx.Updatable;
+import com.ktar5.utilities.libgdx.util.Updatable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

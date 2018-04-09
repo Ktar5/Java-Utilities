@@ -3,7 +3,7 @@ package com.ktar5.utilities.libgdx.cooldown;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.ObjectMap;
 import com.badlogic.gdx.utils.Pools;
-import com.ktar5.utilities.libgdx.Updatable;
+import com.ktar5.utilities.libgdx.util.Updatable;
 
 import java.util.*;
 
