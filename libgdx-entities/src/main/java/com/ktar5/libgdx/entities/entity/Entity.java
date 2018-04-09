@@ -5,11 +5,11 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.utils.Pool;
-import entities.entity.components.EntityAnimator;
-import entities.entity.components.Position;
-import entities.entity.datastore.BodyDatastore;
-import entities.box2d.WorldManager;
+import com.ktar5.libgdx.entities.box2d.WorldManager;
+import com.ktar5.libgdx.entities.entity.components.EntityAnimator;
+import com.ktar5.libgdx.entities.entity.datastore.BodyDatastore;
 import com.ktar5.utilities.libgdx.util.Identity;
+import com.ktar5.utilities.libgdx.util.Position;
 import com.ktar5.utilities.libgdx.util.Updatable;
 import lombok.Getter;
 

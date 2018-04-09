@@ -2,13 +2,13 @@ package com.ktar5.libgdx.entities.entity.living;
 
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
+import com.ktar5.libgdx.entities.box2d.Fixtures;
+import com.ktar5.libgdx.entities.entity.components.EntityAnimator;
+import com.ktar5.libgdx.entities.entity.components.movement.Movement;
+import com.ktar5.libgdx.entities.entity.components.movement.SetVelocityMovement;
 import com.ktar5.utilities.common.constants.Direction;
-import entities.EngineManager;
-import entities.entity.components.EntityAnimator;
-import entities.entity.components.movement.Movement;
-import entities.entity.components.movement.SetVelocityMovement;
-import entities.box2d.Fixtures;
 import com.ktar5.utilities.libgdx.Feature;
+import com.ktar5.utilities.libgdx.core.EngineManager;
 import com.ktar5.utilities.libgdx.util.Updatable;
 import com.ktar5.utilities.libgdx.fsm.GameStateMachine;
 import com.ktar5.utilities.libgdx.fsm.State;

@@ -2,10 +2,8 @@ package com.ktar5.libgdx.entities.events.projectile;
 
 import com.ktar5.libgdx.entities.entity.datastore.EntityDatastore;
 import com.ktar5.libgdx.entities.entity.datastore.ProjectileDatastore;
-import entities.EngineManager;
-import entities.entity.datastore.EntityDatastore;
-import entities.entity.datastore.ProjectileDatastore;
-import entities.events.contact.BeginContactEvent;
+import com.ktar5.libgdx.entities.events.contact.BeginContactEvent;
+import com.ktar5.utilities.libgdx.core.EngineManager;
 import net.engio.mbassy.listener.Handler;
 import net.engio.mbassy.listener.Listener;
 import net.engio.mbassy.listener.References;

@@ -2,8 +2,6 @@ package com.ktar5.libgdx.entities.events.health;
 
 import com.ktar5.libgdx.entities.entity.Entity;
 import com.ktar5.libgdx.entities.entity.living.LivingEntity;
-import entities.entity.Entity;
-import entities.entity.living.LivingEntity;
 import com.ktar5.utilities.libgdx.events.CancellableGameEvent;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

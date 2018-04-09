@@ -1,12 +1,9 @@
 package com.ktar5.libgdx.entities.entity.living;
 
+import com.ktar5.libgdx.entities.entity.Entity;
 import com.ktar5.libgdx.entities.entity.components.Health;
 import com.ktar5.libgdx.entities.entity.datastore.BodyDatastore;
 import com.ktar5.libgdx.entities.entity.datastore.EntityDatastore;
-import entities.entity.Entity;
-import entities.entity.components.Health;
-import entities.entity.datastore.BodyDatastore;
-import entities.entity.datastore.EntityDatastore;
 import lombok.Getter;
 
 @Getter

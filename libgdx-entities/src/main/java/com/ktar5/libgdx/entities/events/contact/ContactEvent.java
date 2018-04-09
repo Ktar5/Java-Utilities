@@ -3,7 +3,6 @@ package com.ktar5.libgdx.entities.events.contact;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Contact;
 import com.ktar5.libgdx.entities.entity.datastore.BodyDatastore;
-import entities.entity.datastore.BodyDatastore;
 import com.ktar5.utilities.libgdx.events.GameEvent;
 import lombok.Getter;
 

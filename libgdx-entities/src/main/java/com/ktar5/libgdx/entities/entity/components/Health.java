@@ -1,11 +1,11 @@
 package com.ktar5.libgdx.entities.entity.components;
 
 import com.badlogic.gdx.utils.Pool;
-import entities.EngineManager;
-import entities.entity.living.LivingEntity;
-import entities.events.health.DamageEvent;
-import entities.events.health.DeathEvent;
-import entities.events.health.HealEvent;
+import com.ktar5.libgdx.entities.entity.living.LivingEntity;
+import com.ktar5.libgdx.entities.events.health.DamageEvent;
+import com.ktar5.libgdx.entities.events.health.DeathEvent;
+import com.ktar5.libgdx.entities.events.health.HealEvent;
+import com.ktar5.utilities.libgdx.core.EngineManager;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

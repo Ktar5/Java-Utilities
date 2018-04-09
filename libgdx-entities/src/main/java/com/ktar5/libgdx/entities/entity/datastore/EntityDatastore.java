@@ -1,7 +1,7 @@
 package com.ktar5.libgdx.entities.entity.datastore;
 
-import entities.entity.Entity;
-import entities.entity.living.LivingEntity;
+import com.ktar5.libgdx.entities.entity.Entity;
+import com.ktar5.libgdx.entities.entity.living.LivingEntity;
 import lombok.Getter;
 
 public class EntityDatastore implements BodyDatastore<EntityDatastore> {

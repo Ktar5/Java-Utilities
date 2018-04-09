@@ -1,7 +1,7 @@
 package com.ktar5.libgdx.entities.entity.datastore;
 
 import com.badlogic.gdx.physics.box2d.Contact;
-import entities.entity.Entity;
+import com.ktar5.libgdx.entities.entity.Entity;
 
 public abstract class SensorDatastore implements BodyDatastore<SensorDatastore> {
 
