@@ -1,11 +1,11 @@
-package com.ktar5.libgdx.entities.entity.projectile;
+package com.ktar5.libgdx.entities.entity.box2d;
 
 import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.ktar5.libgdx.entities.entity.Entity;
-import com.ktar5.libgdx.entities.entity.datastore.BodyDatastore;
-import com.ktar5.libgdx.entities.entity.datastore.ProjectileDatastore;
+import com.ktar5.libgdx.entities.entity.IEntity;
+import com.ktar5.libgdx.entities.entity.box2d.datastore.BodyDatastore;
+import com.ktar5.libgdx.entities.entity.box2d.datastore.ProjectileDatastore;
 
-public abstract class ProjectileEntity extends Entity {
+public abstract class ProjectileEntity extends PhysEntity {
     public ProjectileEntity(float height, float width) {
         super(height, width);
     }
@@ -19,25 +19,16 @@ public abstract class ProjectileEntity extends Entity {
         return bodyDef;
     }
 
-    protected abstract void onHits(Entity hit);
+    protected abstract void onHit(IEntity entity);
 
     @Override
     public BodyDatastore initializeBodyDatastore() {
         return new ProjectileDatastore(this) {
             @Override
-            public void onHit(Entity hit) {
-                onHits(hit);
+            public void onHit(IEntity hit) {
+                onHit(hit);
             }
         };
     }
 
-    @Override
-    public void reset() {
-        super.reset();
-    }
-
-    @Override
-    public void update(float dTime) {
-        super.update(dTime);
-    }
 }

@@ -8,10 +8,10 @@ import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
-import com.ktar5.utilities.libgdx.core.EngineManager;
 import com.ktar5.libgdx.entities.events.contact.ContactEventDispatcher;
-import com.ktar5.utilities.libgdx.rendering.Renderable;
 import com.ktar5.utilities.libgdx.Const;
+import com.ktar5.utilities.libgdx.core.EngineManager;
+import com.ktar5.utilities.libgdx.rendering.Renderable;
 import com.ktar5.utilities.libgdx.util.Updatable;
 import lombok.Getter;
 

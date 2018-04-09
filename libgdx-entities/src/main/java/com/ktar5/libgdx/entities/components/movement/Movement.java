@@ -1,4 +1,4 @@
-package com.ktar5.libgdx.entities.entity.components.movement;
+package com.ktar5.libgdx.entities.components.movement;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -8,8 +8,8 @@ import com.badlogic.gdx.math.Vector2;
 import com.ktar5.utilities.common.constants.Axis;
 import com.ktar5.utilities.libgdx.Const;
 import com.ktar5.utilities.libgdx.Feature;
-import com.ktar5.utilities.libgdx.util.Updatable;
 import com.ktar5.utilities.libgdx.input.devices.Xbox360Pad;
+import com.ktar5.utilities.libgdx.util.Updatable;
 import lombok.Getter;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;

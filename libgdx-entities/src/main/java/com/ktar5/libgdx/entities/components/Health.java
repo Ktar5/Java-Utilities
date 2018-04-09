@@ -1,7 +1,7 @@
-package com.ktar5.libgdx.entities.entity.components;
+package com.ktar5.libgdx.entities.components;
 
 import com.badlogic.gdx.utils.Pool;
-import com.ktar5.libgdx.entities.entity.living.LivingEntity;
+import com.ktar5.libgdx.entities.entity.ILivingEntity;
 import com.ktar5.libgdx.entities.events.health.DamageEvent;
 import com.ktar5.libgdx.entities.events.health.DeathEvent;
 import com.ktar5.libgdx.entities.events.health.HealEvent;
@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class Health implements Pool.Poolable {
     private int health, maxHealth;
     @ToStringExclude
-    private LivingEntity holder;
+    private ILivingEntity holder;
 
     public void heal(int amount) {
         amount = Math.abs(amount);
@@ -60,7 +60,6 @@ public class Health implements Pool.Poolable {
         holder = null;
     }
 
-    //TODO event system
     private void onDeath(DamageCause damageCause) {
         DeathEvent event = new DeathEvent(holder, damageCause);
         EngineManager.get().getEventBus().publish(event);

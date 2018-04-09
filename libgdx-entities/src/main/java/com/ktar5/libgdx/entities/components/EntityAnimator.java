@@ -1,4 +1,4 @@
-package com.ktar5.libgdx.entities.entity.components;
+package com.ktar5.libgdx.entities.components;
 
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

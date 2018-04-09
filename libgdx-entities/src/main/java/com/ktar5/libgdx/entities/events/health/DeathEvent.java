@@ -1,7 +1,7 @@
 package com.ktar5.libgdx.entities.events.health;
 
-import com.ktar5.libgdx.entities.entity.components.Health;
-import com.ktar5.libgdx.entities.entity.living.LivingEntity;
+import com.ktar5.libgdx.entities.components.Health;
+import com.ktar5.libgdx.entities.entity.ILivingEntity;
 import com.ktar5.utilities.libgdx.events.GameEvent;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,9 +10,9 @@ import lombok.Getter;
 @AllArgsConstructor
 public class DeathEvent extends GameEvent {
     private Health.DamageCause cause;
-    private final LivingEntity killed;
+    private final ILivingEntity killed;
 
-    public DeathEvent(LivingEntity killed, Health.DamageCause cause) {
+    public DeathEvent(ILivingEntity killed, Health.DamageCause cause) {
         this.killed = killed;
         this.cause = cause;
     }

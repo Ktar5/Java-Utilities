@@ -1,10 +1,10 @@
 package com.ktar5.libgdx.entities.events.sensor;
 
-import com.ktar5.utilities.libgdx.core.EngineManager;
-import com.ktar5.libgdx.entities.entity.datastore.EntityDatastore;
-import com.ktar5.libgdx.entities.entity.datastore.SensorDatastore;
+import com.ktar5.libgdx.entities.entity.box2d.datastore.EntityDatastore;
+import com.ktar5.libgdx.entities.entity.box2d.datastore.SensorDatastore;
 import com.ktar5.libgdx.entities.events.contact.BeginContactEvent;
 import com.ktar5.libgdx.entities.events.contact.EndContactEvent;
+import com.ktar5.utilities.libgdx.core.EngineManager;
 import net.engio.mbassy.listener.Handler;
 import net.engio.mbassy.listener.Listener;
 import net.engio.mbassy.listener.References;

@@ -3,7 +3,8 @@ package com.ktar5.libgdx.entities.entity;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ObjectMap;
 import com.badlogic.gdx.utils.Pools;
-import com.ktar5.libgdx.entities.entity.living.PlayerEntity;
+import com.ktar5.libgdx.entities.entity.box2d.PhysEntity;
+import com.ktar5.libgdx.entities.entity.box2d.PlayerPhysEntity;
 import com.ktar5.utilities.libgdx.rendering.Renderable;
 import com.ktar5.utilities.libgdx.util.JsonUtil;
 import com.ktar5.utilities.libgdx.util.Updatable;
@@ -14,8 +15,8 @@ import org.pmw.tinylog.Logger;
 
 import java.util.UUID;
 
-public class EntityCoordinator<P extends PlayerEntity> implements Updatable, Renderable {
-    private final ObjectMap<UUID, Entity> entities;
+public class EntityCoordinator<P extends PlayerPhysEntity> implements Updatable, Renderable {
+    private final ObjectMap<UUID, PhysEntity> entities;
     @Getter
     private P player;
 
@@ -30,23 +31,23 @@ public class EntityCoordinator<P extends PlayerEntity> implements Updatable, Ren
 
     public void removeEntity(UUID uuid) {
         if (!entities.containsKey(uuid)) {
-            Logger.debug(new RuntimeException("Entity with uuid: " + uuid.toString() + " does not exist"));
+            Logger.debug(new RuntimeException("PhysEntity with uuid: " + uuid.toString() + " does not exist"));
             return;
         }
         Pools.free(entities.remove(uuid));
     }
 
-    public void addEntity(Entity entity) {
+    public void addEntity(PhysEntity entity) {
         if (entities.containsKey(entity.getId())) {
-            Logger.debug(new RuntimeException("Entity already exists with information"));
-            Logger.debug("Entity already exists with information:" + entity.toString());
+            Logger.debug(new RuntimeException("PhysEntity already exists with information"));
+            Logger.debug("PhysEntity already exists with information:" + entity.toString());
             Logger.debug(JsonUtil.prettify(ToStringBuilder.reflectionToString(entity, ToStringStyle.JSON_STYLE)));
             return;
         }
         entities.put(entity.getId(), entity);
     }
 
-    public Entity getEntity(UUID uuid) {
+    public PhysEntity getEntity(UUID uuid) {
         if (entities.containsKey(uuid)) {
             return entities.get(uuid);
         }
@@ -56,14 +57,14 @@ public class EntityCoordinator<P extends PlayerEntity> implements Updatable, Ren
 
     @Override
     public void update(float dTime) {
-        for (Entity entity : entities.values()) {
+        for (PhysEntity entity : entities.values()) {
             entity.update(dTime);
         }
     }
 
     @Override
     public void render(SpriteBatch batch, float dTime) {
-        for (Entity entity : entities.values()) {
+        for (PhysEntity entity : entities.values()) {
             entity.getEntityAnimator().render(batch, entity.position.x, entity.position.y, entity.position.getAngle());
         }
         player.getEntityAnimator().render(batch, player.getPosition().x, player.getPosition().y, 0);

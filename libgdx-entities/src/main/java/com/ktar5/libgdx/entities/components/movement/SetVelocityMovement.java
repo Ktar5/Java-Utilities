@@ -1,4 +1,4 @@
-package com.ktar5.libgdx.entities.entity.components.movement;
+package com.ktar5.libgdx.entities.components.movement;
 
 import com.badlogic.gdx.math.Vector2;
 import com.ktar5.utilities.libgdx.Const;
