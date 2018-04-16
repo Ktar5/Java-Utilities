@@ -36,7 +36,7 @@ public class CameraMove extends CameraBase {
         } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
             yAxisValue = -temp;
         }
-
+        
         if (camera != null) {
             camera.translate(xAxisValue, yAxisValue);
             if (bound) {

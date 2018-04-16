@@ -1,6 +1,7 @@
 package com.ktar5.utilities.libgdx.rendering;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
@@ -51,7 +52,7 @@ public class RenderManager implements Disposable, Updatable {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         spriteBatch.setProjectionMatrix(EngineManager.get().getCameraBase().getCamera().combined);
-
+        
         customizedRender.preRender(dTime);
 
         spriteBatch.begin();

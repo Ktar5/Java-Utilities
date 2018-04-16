@@ -10,6 +10,6 @@ public class StaticCamera extends CameraBase {
 
     @Override
     public void update(float dTime) {
-
+    
     }
 }

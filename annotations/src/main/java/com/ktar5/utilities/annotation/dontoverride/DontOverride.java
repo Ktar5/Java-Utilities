@@ -5,6 +5,6 @@ import java.lang.annotation.*;
 @Documented
 @Target(ElementType.METHOD)
 @Inherited
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface DontOverride {
 }
