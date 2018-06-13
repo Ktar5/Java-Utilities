@@ -22,7 +22,7 @@ public class FileScanner {
         }
         if (root == null) return;
         if (!root.isDirectory()) {
-            throw new IllegalArgumentException("folder is not a Directory");
+            throw new IllegalArgumentException(root.getPath() + " folder is not a Directory");
         }
         builder.append(getIndentString(indent));
         builder.append("+--");
