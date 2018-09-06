@@ -41,8 +41,11 @@ public class FileScanner {
         for (File file : root.listFiles()) {
             if (file.isDirectory()) {
                 searchDir(file, indent + 1);
-            } else if (print) {
-                printFile(file, indent + 1, fileConsumer.apply(file));
+            } else{
+                Boolean apply = fileConsumer.apply(file);
+                if (print) {
+                    printFile(file, indent + 1, apply);
+                }
             }
         }
     }
