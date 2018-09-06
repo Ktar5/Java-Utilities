@@ -10,14 +10,22 @@ public class FileScanner {
 
     public Function<File, Boolean> fileConsumer;
     private StringBuilder builder = new StringBuilder();
+    private boolean print = false;
 
     public FileScanner(File root, Function<File, Boolean> fileConsumer) {
         this.fileConsumer = fileConsumer;
         searchDir(root, 0);
     }
 
+
+    public FileScanner(File root, Function<File, Boolean> fileConsumer, boolean print) {
+        this.fileConsumer = fileConsumer;
+        searchDir(root, 0);
+        this.print = print;
+    }
+
     public void searchDir(File root, int indent) {
-        if(indent > 3){
+        if (indent > 3) {
             return;
         }
         if (root == null) return;
@@ -33,7 +41,7 @@ public class FileScanner {
         for (File file : root.listFiles()) {
             if (file.isDirectory()) {
                 searchDir(file, indent + 1);
-            } else {
+            } else if (print) {
                 printFile(file, indent + 1, fileConsumer.apply(file));
             }
         }
@@ -43,7 +51,7 @@ public class FileScanner {
         if (special) {
             builder.append(ConsoleColors.GREEN_BOLD);
             builder.append(getSpecialIndentString(indent));
-        }else{
+        } else {
             builder.append(getIndentString(indent));
         }
         builder.append("+--");

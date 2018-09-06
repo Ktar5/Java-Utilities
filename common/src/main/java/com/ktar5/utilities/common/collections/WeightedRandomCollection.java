@@ -24,6 +24,7 @@ public class WeightedRandomCollection<E> {
      *
      * @param weight the weight (relative to the others)
      * @param result the item that corresponds to this weight
+     * @return this
      */
     public WeightedRandomCollection<E> add(double weight, E result) {
         if (weight <= 0) throw new NumberFormatException("Weights cannot be less than zero. Idiot.");
