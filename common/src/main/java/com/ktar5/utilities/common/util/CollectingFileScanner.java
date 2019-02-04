@@ -33,7 +33,7 @@ public class CollectingFileScanner {
     }
 
     public void searchDir(File root, int indent) {
-        if (indent > 3) {
+        if (indent > 6) {
             return;
         }
         if (root == null) return;

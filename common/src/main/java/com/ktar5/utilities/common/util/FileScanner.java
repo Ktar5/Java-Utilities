@@ -24,8 +24,12 @@ public class FileScanner {
         this.print = print;
     }
 
+    public void searchDir(){
+
+    }
+
     public void searchDir(File root, int indent) {
-        if (indent > 3) {
+        if (indent > 6) {
             return;
         }
         if (root == null) return;
