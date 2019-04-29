@@ -18,7 +18,7 @@ public abstract class AbstractGame<G extends AbstractGame<G>> implements Applica
     
     
     @DontOverride
-    public void create() {
+    public final void create() {
         engineManager = EngineManager.initialize(getThis());
         initialize();
         setScreen(getStartingScreen());
