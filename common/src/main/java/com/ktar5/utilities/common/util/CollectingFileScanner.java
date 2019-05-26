@@ -1,7 +1,7 @@
 package com.ktar5.utilities.common.util;
 
 import com.ktar5.utilities.common.constants.ConsoleColors;
-import org.pmw.tinylog.Logger;
+import org.tinylog.Logger;
 
 import java.io.File;
 import java.util.ArrayList;
